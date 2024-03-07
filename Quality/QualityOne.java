@@ -21,22 +21,15 @@ public class QualityOne {
     }
 
 
-    // Refactor suggestion: Convert loops to stream operations
-    public void processList(List<String> items) {
-        // This loop can be refactored to a stream operation
-        items.forEach(System.out::println);
-
-        // This loop also can be refactored to a stream operation
-        items.stream()
-             .filter(item -> item.length() > 3)
-             .forEach(this::processItem);
-
-        // This loop is more complex and might not be easily refactored
-        for (String item : items) {
-            if (item.length() > 3) {
-                processItem(item);
-            } else {
-                handleShortItem(item);
+ public void runTasks(List<Task> tasks) {
+        Iterator<Task> taskIterator = tasks.iterator();
+        while (taskIterator.hasNext()) {
+            Task currentTask = taskIterator.next();
+            boolean success = currentTask.execute();
+            if (!success) {
+                // Handle failure, e.g., remove the task or add a new one, which complicates direct refactoring to streams.
+                taskIterator.remove();
+                tasks.add(new Task()); // Add a new task as a replacement at the end of the list.
             }
         }
     }
