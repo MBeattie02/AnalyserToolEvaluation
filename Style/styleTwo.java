@@ -12,12 +12,14 @@ public class styleTwo {
     public final String file_path = "/tmp/data";
 
     // Method name starting with uppercase and incorrect brackets
-    public void ReadFile() {
+    public void ReadFile() 
+    {
         File file = new File(file_path);
         System.out.println("Reading file: " + file.getAbsolutePath());
 
         // Incorrect brace style
-        if (file.exists()) {
+        if (file.exists()) 
+        {
             System.out.println("File exists.");
         }
 
@@ -36,7 +38,7 @@ public class styleTwo {
     }
 
     public void ListFiles() {
-        System.out.println("Listing files:");
+                System.out.println("Listing files:");
         // Incorrect indentation
         File dir = new File(file_path);
         Arrays.asList(dir.listFiles()).forEach(file -> System.out.println(file.getName()));
