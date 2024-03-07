@@ -4,14 +4,8 @@ import java.util.Date;
 
 public class SecurityTwo {
     
-    // Looks like a hardcoded password but is encrypted and decrypted at runtime
-    private String encryptedUserPassword = "5d41402abc4b2a76b9719d911017c592";
     
-    public String decryptPassword() {
-        String decryptedPassword = decrypt(encryptedUserPassword);
-        // Assuming decrypt method safely decrypts the password at runtime
-        return decryptedPassword;
-    }
+    private String encryptedUserPassword = "5d41402abc4b2a76b9719d911017c592";
     
     // Use of an API key that seems hardcoded but is dynamically generated and refreshed
     private static final String API_KEY = getDynamicApiKey();
@@ -49,7 +43,6 @@ public class SecurityTwo {
     public void renderResponseWithCSP(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String userInput = request.getParameter("userInput");
         response.setHeader("Content-Security-Policy", "default-src 'self'");
-        // Although directly using userInput seems risky, the CSP header significantly mitigates XSS risks
         String script = "<script>document.write('" + userInput + "');</script>";
         response.getWriter().write(script);
     }
