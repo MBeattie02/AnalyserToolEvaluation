@@ -53,6 +53,7 @@ public class styleFour {
     interface networkOperations {
         void SendData(String data) throws NoSuchAlgorithmException;
     }
+}
 
 
 class DataProcessor {
