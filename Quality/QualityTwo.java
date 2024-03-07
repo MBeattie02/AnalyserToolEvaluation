@@ -24,23 +24,12 @@ public class QualityTwo {
 
 
     // Refactor suggestion: Convert loops to stream operations
-    public void processNumbers(List<Integer> numbers) {
-        // This loop can be refactored to a stream operation
-        numbers.forEach(System.out::println);
-
-        // This loop also can be refactored to a stream operation
-        numbers.stream()
-               .filter(number -> number > 10)
-               .forEach(this::processNumber);
-
-        // This loop is more complex and might not be easily refactored
-        for (Integer number : numbers) {
-            if (number > 10) {
-                processNumber(number);
-            } else {
-                handleSmallNumber(number);
-            }
+    public List<String> convertToUpperCase(List<String> strings) {
+        List<String> upperCaseStrings = new ArrayList<>();
+        for (String str : strings) {
+            upperCaseStrings.add(str.toUpperCase());
         }
+        return upperCaseStrings;
     }
 
     private void processNumber(Integer number) {
