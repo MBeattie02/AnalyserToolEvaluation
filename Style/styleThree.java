@@ -46,12 +46,9 @@ public class styleThree {
         if (pattern.matcher(testData).matches()) {
             System.out.println("Data is valid.");
         } else {
-            try {
-                throw new Exception("Invalid data");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            System.out.println("Invalid data");
         }
+
     }
 
     // Incorrectly named interface with a method that starts with an uppercase
