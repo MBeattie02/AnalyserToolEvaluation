@@ -42,8 +42,7 @@ public class styleThree {
 public void exampleMethod(int number) {
     if (number > 0) {
             System.out.println("Number is positive.");
-    } else 
-    {
+    } else {
         System.out.println("Number is not positive.");
     }
 }
