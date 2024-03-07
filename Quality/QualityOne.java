@@ -21,18 +21,16 @@ public class QualityOne {
     }
 
 
- public void runTasks(List<Task> tasks) {
-        Iterator<Task> taskIterator = tasks.iterator();
-        while (taskIterator.hasNext()) {
-            Task currentTask = taskIterator.next();
-            boolean success = currentTask.execute();
-            if (!success) {
-                // Handle failure, e.g., remove the task or add a new one, which complicates direct refactoring to streams.
-                taskIterator.remove();
-                tasks.add(new Task()); // Add a new task as a replacement at the end of the list.
-            }
+    List<String> items = Arrays.asList("apple", "banana", "cherry");
+    int[] count = new int[1]; // External mutable state
+    
+    for (String item : items) {
+        if (item.length() > 5) {
+            System.out.println(item);
+            count[0]++; // Modifies external state based on condition
         }
     }
+
 
     private void processItem(String item) {
         // Some processing on the item
