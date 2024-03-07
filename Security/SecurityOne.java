@@ -41,6 +41,7 @@ public class SecurityOne {
             // This line could potentially lead to insecure deserialization
             return ois.readObject();
         }
+  }
 
     //Insecure Key
 
