@@ -19,7 +19,8 @@ public class styleThree {
         reportData.put("Failure", 20);
 
         // Incorrect brace style
-        if (reportData.isEmpty()) {
+        if (reportData.isEmpty()) 
+        {
             System.out.println("Report is empty.");
         }
 
@@ -40,7 +41,7 @@ public class styleThree {
 
     // Incorrectly indented method
     public void ValidateData() {
-        Pattern pattern = Pattern.compile("^(.+)@(.+)$");
+                Pattern pattern = Pattern.compile("^(.+)@(.+)$");
         String testData = "test@example.com";
         if (pattern.matcher(testData).matches()) {
             System.out.println("Data is valid.");
@@ -65,7 +66,8 @@ class DataProcessor {
 
     // Method demonstrates multiple style issues: incorrect brace style, magic
     // numbers
-    public void ProcessData(String data) {
+    public void ProcessData(String data)
+    {
         for (int i = 0; i < retry_limit; i++) {
             System.out.println("Attempt: " + (i + 1));
             if (data.isEmpty()) {
