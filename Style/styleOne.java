@@ -14,7 +14,8 @@ public class styleOne {
 
         int threshold = 5;
         // Incorrect brace style
-        if (threshold < max_count) {
+        if (threshold < max_count) 
+        {
             System.out.println("Threshold is less than max");
         }
         // Variable not following camelCase
@@ -28,7 +29,7 @@ public class styleOne {
     }
 
     public void anotherMethod() {
-        System.out.println("Incorrect indentation here."); // Incorrectly indented
+            System.out.println("Incorrect indentation here."); // Incorrectly indented
         System.out.println("Correct indentation."); // Correctly indented
     }
 
