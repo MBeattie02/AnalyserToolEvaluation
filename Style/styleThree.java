@@ -39,17 +39,14 @@ public class styleThree {
         }
     }
 
-    // Incorrectly indented method
-    public void ValidateData() {
-                Pattern pattern = Pattern.compile("^(.+)@(.+)$");
-        String testData = "test@example.com";
-        if (pattern.matcher(testData).matches()) {
-            System.out.println("Data is valid.");
-        } else {
-            System.out.println("Invalid data");
-        }
-
+public void exampleMethod(int number) {
+    if (number > 0) {
+            System.out.println("Number is positive.");
+    } else {
+        System.out.println("Number is not positive.");
     }
+}
+
 
     // Incorrectly named interface with a method that starts with an uppercase
     interface networkOperations {
